@@ -9,36 +9,50 @@ public class Player_controller : MonoBehaviour
 {
     public float Speed = 3.0f;
     public float mouse_sensitiv = 3.0f;
-    private Player_movement PlayerMov; 
+    private Player_movement PlayerMov;
+    private bool IsTalking = false;
     // Start is called before the first frame update
     void Start()
     {
+        IsTalking = false;
         PlayerMov = GetComponent<Player_movement>();
     }
 
     // Update is called once per frame
     private void Update()
     {
-        float XMov = Input.GetAxisRaw("Horizontal");
-        float ZMov = Input.GetAxisRaw("Vertical");
+        if(IsTalking == false)
+        {
+            float XMov = Input.GetAxisRaw("Horizontal");
+            float ZMov = Input.GetAxisRaw("Vertical");
 
-        Vector3 MovementHorizontal = transform.right * XMov;
-        Vector3 MovementVertical = transform.forward * ZMov;
+            Vector3 MovementHorizontal = transform.right * XMov;
+            Vector3 MovementVertical = transform.forward * ZMov;
 
-        Vector3 Velocity = (MovementHorizontal + MovementVertical).normalized * Speed;
+            Vector3 Velocity = (MovementHorizontal + MovementVertical).normalized * Speed;
 
-        PlayerMov.Move(Velocity);
+            PlayerMov.Move(Velocity);
 
-        float yrot = Input.GetAxisRaw("Mouse X");
+            float yrot = Input.GetAxisRaw("Mouse X");
 
-        Vector3 rotation = new Vector3(0, yrot, 0) * mouse_sensitiv;
+            Vector3 rotation = new Vector3(0, yrot, 0) * mouse_sensitiv;
 
-        PlayerMov.Rotate(rotation);
+            PlayerMov.Rotate(rotation);
 
-        float xrot = Input.GetAxisRaw("Mouse Y");
+            float xrot = Input.GetAxisRaw("Mouse Y");
 
-        Vector3 camerarotation = new Vector3(xrot, 0, 0) * mouse_sensitiv;
+            Vector3 camerarotation = new Vector3(xrot, 0, 0) * mouse_sensitiv;
 
-        PlayerMov.cameraRotate(camerarotation);
+            PlayerMov.cameraRotate(camerarotation);
+        }
+
+    }
+    public void BeginConversation()
+    {
+        IsTalking = true;
+    }
+    public void EndConversation()
+    {
+        IsTalking = false;
     }
 }

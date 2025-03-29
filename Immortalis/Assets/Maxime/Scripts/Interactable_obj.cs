@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(ConversationStarter))]
 public class Interactable_obj : MonoBehaviour
 {
     public string interactionText = "Press E to interact";
-    public UnityEvent OnInteract; 
+    public UnityEvent OnInteract;
 
     public string GetInteractionText()
     {
@@ -15,5 +17,9 @@ public class Interactable_obj : MonoBehaviour
     public void Interact()
     {
         OnInteract.Invoke();
+    }
+    public void DialogueTextSystem()
+    {
+
     }
 }

@@ -7,13 +7,14 @@ using UnityEngine.UIElements;
 public class PlayerInteraction : MonoBehaviour
 {
     public Camera Cam;
+    private bool IsTalking = false;
     float DistanceInteraction = 3f;
     public GameObject InteractionText;
     private Interactable_obj CurrentInteractable; 
     // Start is called before the first frame update
     void Start()
     {
-        
+        IsTalking = false;
     }
 
     // Update is called once per frame
@@ -28,7 +29,7 @@ public class PlayerInteraction : MonoBehaviour
             if(interactableObj != null && interactableObj != CurrentInteractable)
             {
                 CurrentInteractable = interactableObj;
-                InteractionText.SetActive(true);
+                InteractionText.SetActive(true);       
                 TextMeshProUGUI textcomponent = InteractionText.GetComponent<TextMeshProUGUI>();
                 if(textcomponent != null)
                 {
@@ -41,10 +42,24 @@ public class PlayerInteraction : MonoBehaviour
             CurrentInteractable = null;
             InteractionText.SetActive(false);
         }
-
-        if (Input.GetKeyDown(KeyCode.E))
+        
+        if(IsTalking == false)
         {
-            CurrentInteractable?.Interact();
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                CurrentInteractable?.Interact();
+                Cam.transform.LookAt(CurrentInteractable.transform);
+            }
         }
+
+    }
+    public void Conversation()
+    {
+        IsTalking = true;
+        
+    }
+    public void EndConversation()
+    {
+        IsTalking = false;
     }
 }
