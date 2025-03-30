@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(ConversationStarter))]
+
 public class Interactable_obj : MonoBehaviour
 {
     public string interactionText = "Press E to interact";

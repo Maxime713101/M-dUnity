@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ConversationStarter : MonoBehaviour
 {
-    [SerializeField] private NPCConversation[] SecretaireConversation;
+    [SerializeField] private NPCConversation[] SecretaireConversations;
     private int index = 0;
     public GameObject interactiontext;
     // Start is called before the first frame update
@@ -21,18 +21,32 @@ public class ConversationStarter : MonoBehaviour
     }
     public void StartConverstation()
     {
-        if (index == 0)
+        if(SecretaireConversations != null)
         {
-            interactiontext.SetActive(false);
-            ConversationManager.Instance.StartConversation(SecretaireConversation[0]);
-            index += 1;
-            
-        }
-        else if (index == 1)
-        {
-            ConversationManager.Instance.StartConversation(SecretaireConversation[1]);
-                
+            if (index == 0)
+            {
+                interactiontext.SetActive(false);
+                ConversationManager.Instance.StartConversation(SecretaireConversations[0]);
+                index += 1;
+
+            }
+            else if (index == 1)
+            {
+                interactiontext.SetActive(false);
+                ConversationManager.Instance.StartConversation(SecretaireConversations[1]);
+
+            }
+            else if (index == 2)
+            {
+                interactiontext.SetActive(false);
+                ConversationManager.Instance.StartConversation(SecretaireConversations[2]);
+            }
+
         }
 
+    }
+    public void recupproduitchimique()
+    {
+        index = 2;
     }
 }
