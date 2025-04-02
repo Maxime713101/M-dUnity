@@ -10,8 +10,10 @@ public class PlayerInteraction : MonoBehaviour
     public Camera Cam;
     private bool IsTalking = false;
     private bool canInteract = true;
-   
+
+    private string nomobjet = "";
     public Material outlineMaterial;
+    public Canvas uiobjetproche;
     private float DistanceInteraction = 3f;
     public GameObject InteractionText;
     private Interactable_obj CurrentInteractable;
@@ -75,9 +77,16 @@ public class PlayerInteraction : MonoBehaviour
         if (!IsTalking && canInteract && Input.GetKeyDown(KeyCode.E) && CurrentInteractable != null)
         {
             CurrentInteractable?.Interact();
+
             if (CurrentInteractable.tag != "Objet")
             {
                 Cam.transform.LookAt(CurrentInteractable.transform);
+            }
+            else if(CurrentInteractable.tag == "Objet")
+            {
+                GameObject CurrentObjet = CurrentInteractable.gameObject.GetComponent<GameObject>();
+                nomobjet = CurrentObjet.name;
+                Debug.Log(CurrentObjet.name);
             }
         }
     }
