@@ -3,7 +3,32 @@ guid: f52480ac175d6144b90a7b7a2068f7fd
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ecran
+    second: {fileID: 2100000, guid: ce43e7412ad34ec4189f0c6f71ab988d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Bureau
+    second: {fileID: 2100000, guid: aaa12a45b28c2b94bb373764b82b220d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Bureau.001
+    second: {fileID: 2100000, guid: 88e30bafbf0e2ef4fa0d222d273e3955, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ToucheClavierNormal
+    second: {fileID: 2100000, guid: 99592e8f15b18d74b87e63fc43841048, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "ToucheClavierSp\xE9cial"
+    second: {fileID: 2100000, guid: d3efcaf8b9f9e36459283a8680952fbf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

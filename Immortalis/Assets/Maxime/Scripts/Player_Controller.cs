@@ -8,9 +8,11 @@ using UnityEngine.UIElements;
 public class Player_controller : MonoBehaviour
 {
     public float Speed = 3.0f;
-    public float mouse_sensitiv = 3.0f;
+    public float mouse_sensitivx = 3.0f;
+    public float mouse_sensitivy = 3.0f;
     private Player_movement PlayerMov;
     private bool IsTalking = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -34,14 +36,13 @@ public class Player_controller : MonoBehaviour
             PlayerMov.Move(Velocity);
 
             float yrot = Input.GetAxisRaw("Mouse X");
+            Vector3 rotation = new Vector3(0, yrot, 0) * mouse_sensitivy;
 
-            Vector3 rotation = new Vector3(0, yrot, 0) * mouse_sensitiv;
 
             PlayerMov.Rotate(rotation);
 
             float xrot = Input.GetAxisRaw("Mouse Y");
-
-            Vector3 camerarotation = new Vector3(xrot, 0, 0) * mouse_sensitiv;
+            Vector3 camerarotation = new Vector3(xrot, 0, 0) * mouse_sensitivx;
 
             PlayerMov.cameraRotate(camerarotation);
         }

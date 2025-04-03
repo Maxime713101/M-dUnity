@@ -45,5 +45,9 @@ public class Player_movement : MonoBehaviour
         rgb.MoveRotation(rgb.rotation * Quaternion.Euler(Rotation));
         cam.transform.Rotate(- Camerarotation);
     }
+    public void StopVelocity()
+    {
+        Velocity = Vector3.zero;
+    }
 
 }

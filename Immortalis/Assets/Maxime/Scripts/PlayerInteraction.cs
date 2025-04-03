@@ -6,36 +6,47 @@ using UnityEngine.UIElements;
 using Unity.VisualScripting;
 using UnityEditor.Search;
 using UnityEditor;
+using UnityEngine.UI;
+using Image = UnityEngine.UI.Image;
+using UnityEngine.WSA;
 
 [RequireComponent(typeof(Player_controller))]
 public class PlayerInteraction : MonoBehaviour
 {
+    //public variable
     public Camera Cam;
+    public Material outlineMaterial;
+    public GameObject uiobjetproche;
+    public GameObject InteractionText;
+    public GameObject uiobjetinventaire;
+    public GameObject LookatStart;
+
+    //private variable
     private bool IsTalking = false;
     private bool canInteract = true;
     private Player_controller player_controller;
-    public Material outlineMaterial;
-    public GameObject uiobjetproche;
-    private float DistanceInteraction = 3f;
-    public GameObject InteractionText;
+    private float DistanceInteraction = 3f;   
     private Interactable_obj CurrentInteractable;
     private Renderer currentRenderer;
     private Material[] originalMaterials; // Sauvegarde des matériaux de base
+
+    //Rotation des objets
     private float currentRotationX = 0f;
     private float currentRotationY = 0f;
 
-    // Limites de rotation
-    public float minRotationY = -45f;  // Limite inférieure pour la rotation verticale (axe Y)
-    public float maxRotationY = 45f;
-    public float minRotationX = -45f;  // Limite inférieure pour la rotation verticale (axe Y)
-    public float maxRotationX = 45f;
+    // Limites de rotation des objets
+    private float minRotationY = -45f;  // Limite inférieure pour la rotation verticale (axe Y)
+    private float maxRotationY = 45f;
+    private float minRotationX = -45f;  // Limite inférieure pour la rotation verticale (axe Y)
+    private float maxRotationX = 45f;
 
 
     void Start()
     {
         IsTalking = false;
         player_controller = GetComponent<Player_controller>();
-        
+        Cam.transform.LookAt(LookatStart.transform);
+        MouseNotVisible();   
     }
 
     // sUpdate is called once per frame
@@ -91,6 +102,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             CurrentInteractable?.Interact();
             RemoveOutline();
+            MouseVisible();
 
             if (CurrentInteractable.tag != "Objet" && CurrentInteractable.tag != "ObjetBon")
             {
@@ -128,6 +140,7 @@ public class PlayerInteraction : MonoBehaviour
                         CurrentInteractable.gameObject.SetActive(false);
                     }
                 }
+                
         
             }
         }
@@ -188,5 +201,28 @@ public class PlayerInteraction : MonoBehaviour
     {
         IsTalking = false;
         canInteract = true;
+        MouseNotVisible();
+    }
+    public void DansInventaire()
+    {
+        Image imageobjet = CurrentInteractable.GetComponentInChildren<Image>();
+        Image[] inventaireimage = uiobjetinventaire.GetComponentsInChildren<Image>();
+
+        if (imageobjet != null)
+        {
+            inventaireimage[1].sprite = imageobjet.sprite;
+            uiobjetinventaire.SetActive(true);
+        }
+        
+    }
+    public void MouseVisible()
+    {
+        UnityEngine.Cursor.visible = true;
+        
+    }
+    public void MouseNotVisible()
+    {
+        UnityEngine.Cursor.visible = false;
+        
     }
 }
