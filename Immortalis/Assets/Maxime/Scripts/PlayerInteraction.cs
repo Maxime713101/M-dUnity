@@ -103,11 +103,12 @@ public class PlayerInteraction : MonoBehaviour
             RemoveOutline();
             MouseVisible();
 
-            if (CurrentInteractable.tag != "Objet" && CurrentInteractable.tag != "ObjetBon")
+            if (CurrentInteractable.tag == "humain")
             {
+
                 Cam.transform.LookAt(CurrentInteractable.transform);
             }
-            else            
+            else if(CurrentInteractable.tag == "Objet" || CurrentInteractable.tag =="ObjetBon")           
             {
                 uiobjetproche.SetActive(true);
 
@@ -207,7 +208,7 @@ public class PlayerInteraction : MonoBehaviour
         Image imageobjet = CurrentInteractable.GetComponentInChildren<Image>();
         Image[] inventaireimage = uiobjetinventaire.GetComponentsInChildren<Image>();
 
-        if (imageobjet != null)
+        if (imageobjet != null && CurrentInteractable.tag == "ObjetBon")
         {
             inventaireimage[1].sprite = imageobjet.sprite;
             uiobjetinventaire.SetActive(true);
