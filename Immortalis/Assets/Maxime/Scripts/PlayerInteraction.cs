@@ -4,11 +4,10 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UIElements;
 using Unity.VisualScripting;
-using UnityEditor.Search;
 using UnityEditor;
 using UnityEngine.UI;
 using Image = UnityEngine.UI.Image;
-using UnityEngine.WSA;
+
 
 [RequireComponent(typeof(Player_controller))]
 public class PlayerInteraction : MonoBehaviour

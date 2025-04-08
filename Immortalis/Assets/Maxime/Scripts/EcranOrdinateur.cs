@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EcranOrdinateur : MonoBehaviour
 {
+    public bool codegood = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,9 @@ public class EcranOrdinateur : MonoBehaviour
     void Update()
     {
         
+    }
+    public void CodeGood()
+    {
+        codegood = true;
     }
 }
