@@ -1,0 +1,359 @@
+fileFormatVersion: 2
+guid: 30a7d622b0fa01e4aa95e7f16c5a2d10
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bouton_cuve
+    second: {fileID: 2100000, guid: d88665b9f1193a94d9e5d9106da8794b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ChampignonChapeau
+    second: {fileID: 2100000, guid: 7794afb7205fc394e9e1ad30f3484e5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ChampignonQueue
+    second: {fileID: 2100000, guid: 9811a915e3c497f41ba129b159c0b992, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ChampinonBase
+    second: {fileID: 2100000, guid: aa80e29d86a420049bc2db08a123f0e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EcranCuve
+    second: {fileID: 2100000, guid: 580dc400a86dd994ba438b6cc34aeaba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 4fe2c4ac352b98a47ba5bc219f5c9903, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Moss
+    second: {fileID: 2100000, guid: c316082f839cdd34aa1d150df74bea6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock
+    second: {fileID: 2100000, guid: 9ddf69c7ed3a8064a91987c7876ea35c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tube_Cuve_oxygene
+    second: {fileID: 2100000, guid: 60809c668e4a631419f57d9d679d38ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tuyau_ventilateur
+    second: {fileID: 2100000, guid: 9d041ce42d6a22f4d91bb89ca142d7e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boite_mat
+    second: {fileID: 2100000, guid: f798586e4eea2e9418f8f9214c914663, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boite_mat.001
+    second: {fileID: 2100000, guid: 6480d29826a142144bf40aaabb423a61, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bombone
+    second: {fileID: 2100000, guid: 318363d56fd731d47b84bf75e16c18d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bombone.001
+    second: {fileID: 2100000, guid: af5547dcd37bdc84aad2804c23a0fa40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bouteille_chimique
+    second: {fileID: 2100000, guid: 49f49d44e17508a40abbdc8b789c9240, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bouteille_chimique.005
+    second: {fileID: 2100000, guid: 08b54a914605e8841a4cdf16910a9fee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bouteille_chimique2
+    second: {fileID: 2100000, guid: 18a4cf602153f134d8c0939b2f44447b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bureau_mat
+    second: {fileID: 2100000, guid: 9072057804d59fe4abdfe2182b5e905b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: etiquette.006
+    second: {fileID: 2100000, guid: 3ceccd3892a957d4184197736c098508, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: etiquette_bombone
+    second: {fileID: 2100000, guid: 9d8c68f406ad3554eab1569de3463676, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: etiquette_bombone.001
+    second: {fileID: 2100000, guid: 9a4b30f8204d97d488d429b7df9286d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: etiquette_bouteille
+    second: {fileID: 2100000, guid: 389827ed7814c0c429891f555e607bd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: etiquette_fiole
+    second: {fileID: 2100000, guid: 8eb2f8cb050dc1e47af0e9b4fef64f3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: etiquette_meduse
+    second: {fileID: 2100000, guid: adb8bebda33a56a40b356e8002be55b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fiole_verre
+    second: {fileID: 2100000, guid: be7aa7f19ab5aff479237f798c7ffcea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fiole_verre.001
+    second: {fileID: 2100000, guid: 550aa9a7c1b2b1a49a53c228650d1e84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fiolebouchon
+    second: {fileID: 2100000, guid: 026c6e0a87c411041a18b7944e082d84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: light_neon
+    second: {fileID: 2100000, guid: 01771da7888a21a42972dccb98bd3f12, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: liquide03
+    second: {fileID: 2100000, guid: 302c9948950148145b56ddec2e59b537, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: liquide05
+    second: {fileID: 2100000, guid: 895d20d0d6b3aeb4f96d2efa03f0deb3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: liquide_03
+    second: {fileID: 2100000, guid: fa489088d2fbe134b88a343c576532db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: liquide_04
+    second: {fileID: 2100000, guid: 529b01e18955d3040a64880478142637, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: liquide_erlenmeyer
+    second: {fileID: 2100000, guid: 246fadbfe340f9640a8060e06c9cbf98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: microscope
+    second: {fileID: 2100000, guid: 999dc49561d546f4b8cd5d2b940add97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: microscope2
+    second: {fileID: 2100000, guid: faa2a22f660b33c4991e269420d17f9a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mouss
+    second: {fileID: 2100000, guid: 44d8b0ea8084e6948bb30eea9ee5acd1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: placard_light.001
+    second: {fileID: 2100000, guid: 66da290fee7aee346a4b3e1442be404c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: placard_light.002
+    second: {fileID: 2100000, guid: 1e41d6bf577c93a4c8595bf49479d47d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: placard_light.004
+    second: {fileID: 2100000, guid: c13d416fa6e06ff4c83d144e899bce1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: placard_mat
+    second: {fileID: 2100000, guid: 3deb6ce570db4874fb25dda7aabb2afb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: placard_mat.002
+    second: {fileID: 2100000, guid: 449786ef2ecf39c4893a5bc40a8b9323, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: placard_poignee
+    second: {fileID: 2100000, guid: 7503f9681f76aaa4d8dacaa075a35631, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: placard_poignee.002
+    second: {fileID: 2100000, guid: aa0aff9000c66d64b9fa9a55196fc200, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: placard_vitre_etagere
+    second: {fileID: 2100000, guid: 02407e11ce1e7d84ab9f63995ec510c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: placard_vitre_etagere.001
+    second: {fileID: 2100000, guid: 952870388217d4c48b655d603974aa42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: placard_vitre_etagere.005
+    second: {fileID: 2100000, guid: 500a1b66779525446a72edcfb939b3bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plan de travail
+    second: {fileID: 2100000, guid: 58a5024c99915bd4cab277a4fac3dec3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shader_eau
+    second: {fileID: 2100000, guid: 59236ccd8c80f3a478cab27bb3c6df71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: support_tubes_essais
+    second: {fileID: 2100000, guid: 82b8c397a6f2fad47b45f981e2e5942f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vitre
+    second: {fileID: 2100000, guid: 89eaed0235dc33a41bb5f95bbb5ba51f, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
