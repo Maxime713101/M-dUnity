@@ -19,7 +19,7 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject InteractionText;
     public GameObject uiobjetinventaire;
     public GameObject LookatStart;
-
+    public RapprochementMeduse Meduse;
     //private variable
     private bool IsTalking = false;
     private bool canInteract = true;
@@ -152,8 +152,6 @@ public class PlayerInteraction : MonoBehaviour
             float mouserotationx = Input.GetAxis("Mouse X") * 2.0f;
             float mouserotationy = Input.GetAxis("Mouse Y") * 2.0f;
 
-            Debug.Log(Input.GetAxis("Mouse X"));
-
             currentRotationX += mouserotationy;
             currentRotationY -= mouserotationx;
 
@@ -205,15 +203,30 @@ public class PlayerInteraction : MonoBehaviour
     }
     public void DansInventaire()
     {
-        Image imageobjet = CurrentInteractable.GetComponentInChildren<Image>();
+        Image[] imageobjet = CurrentInteractable.GetComponentsInChildren<Image>();
         Image[] inventaireimage = uiobjetinventaire.GetComponentsInChildren<Image>();
+        
 
         if (imageobjet != null && CurrentInteractable.tag == "ObjetBon")
         {
-            inventaireimage[1].sprite = imageobjet.sprite;
+            inventaireimage[1].sprite = imageobjet[0].sprite;
             uiobjetinventaire.SetActive(true);
         }
-        
+        else if (imageobjet != null && CurrentInteractable.tag == "AppareilPhoto")
+        {
+            if( Meduse.MeduseIsCloser == true)
+            {
+                inventaireimage[1].sprite = imageobjet[2].sprite;
+                uiobjetinventaire.SetActive(true);
+            }
+            else
+            {
+                //lancer phrase d'echec
+            }
+        }
+
+
+
     }
     public void MouseVisible()
     {

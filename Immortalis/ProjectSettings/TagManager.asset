@@ -8,6 +8,9 @@ TagManager:
   - ObjetBon
   - humain
   - EcranOrdi
+  - AppareilPhoto
+  - Meduse
+  - "m\xE9duse"
   layers:
   - Default
   - TransparentFX
