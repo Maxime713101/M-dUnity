@@ -13,6 +13,7 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ALPHATEST_ON
+  - _NORMALMAP
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -21,7 +22,7 @@ Material:
   stringTagMap:
     RenderType: TransparentCutout
   disabledShaderPasses: []
-  m_LockedProperties: 
+  m_LockedProperties: _Smoothness
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -30,7 +31,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: afc2ce17ccfcd2e4fb088bbd86571e15, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:

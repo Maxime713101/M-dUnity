@@ -8,22 +8,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: light_neon
-    second: {fileID: 2100000, guid: 62b890379fdf7f84bbbb357c4cb94f4a, type: 2}
+    second: {fileID: 2100000, guid: cc0226642432de9469880d6d9db4dadf, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: mur_2_mat
-    second: {fileID: 2100000, guid: 7ef479e1be04ed54f931bd6fe5638312, type: 2}
+    second: {fileID: 2100000, guid: 5aee67b386307c142b78e8efea7deaf5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: mur_mat
-    second: {fileID: 2100000, guid: ba5ee851d95be4546bcc77764fd3532d, type: 2}
+    second: {fileID: 2100000, guid: 3c4fc777d020a6c43bf0e0370b1bae94, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: verre_mat
-    second: {fileID: 2100000, guid: 43f51ef44c930b44e9cef18e42ecf4fe, type: 2}
+    second: {fileID: 2100000, guid: a3359957deb23684b8da3b7931e06d84, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
