@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using DialogueEditor;
 using UnityEngine;
 
 public class TransitionAnimationDiscussion : MonoBehaviour
@@ -10,20 +11,26 @@ public class TransitionAnimationDiscussion : MonoBehaviour
     private bool IsTalking;
     private bool Islookingplayer;
     private Vector3 CustomLookAt;
-    public GameObject StopPosition;
+    public Transform StopPosition;
     private float speed = 1.0f;
     private bool IsMoving;
+    public SkinnedMeshRenderer bodyYork;
+    private bool yorkistalking = true;
     // Start is called before the first frame update
     void Start()
     {
         CustomLookAt = Vector3.zero;
+        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        float dist = Vector3.Distance(transform.position, StopPosition.transform.position);
         
-        if(Islookingplayer == true)
+
+        if (Islookingplayer == true)
         {
 
             CustomLookAt.Set(Player.transform.position.x, transform.position.y, Player.transform.position.z);
@@ -36,18 +43,30 @@ public class TransitionAnimationDiscussion : MonoBehaviour
         }
 
         if (IsMoving == true) 
-        { 
-            if (transform.position.z >= StopPosition.transform.position.z)
+        {
+            if (dist >= 1.2f) 
             {
                 transform.Translate(Vector3.forward * speed * Time.deltaTime);
+                
             }
             else
             {
-                //Mettre l'animation de parlote (faire une transition dans l'animator)
+                IsMoving = false;
+                animatorYork.SetBool("Arrived", true);
             }
+                     
+        }
+        if(yorkistalking == false)
+        {
+
+            int index = bodyYork.sharedMesh.GetBlendShapeIndex("V_Lip_Open");
+            Debug.Log(index);
+            bodyYork.SetBlendShapeWeight(index, 0f);
+            bodyYork.SetBlendShapeWeight(0, 0f);
+            bodyYork.SetBlendShapeWeight(2, 0f);
+            bodyYork.SetBlendShapeWeight(3, 0f);
             
         }
-
         
     }
     IEnumerator Findelaconversation()
@@ -65,5 +84,10 @@ public class TransitionAnimationDiscussion : MonoBehaviour
     public void debutconversation()
     {
         animatorYork.SetBool("IsTalking", true);
+    }
+    public void YorkNotTalking()
+    {
+        yorkistalking = false;
+        
     }
 }

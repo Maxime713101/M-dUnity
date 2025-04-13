@@ -483,7 +483,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 919132148243996401}
+        m_TargetAssemblyTypeName: TransitionAnimationDiscussion, Assembly-CSharp
+        m_MethodName: YorkNotTalking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 0
   TMPFont: {fileID: 11400000, guid: b896401cac2302b489d364a52ffe3e98, type: 2}
   Icon: {fileID: 0}
@@ -640,7 +652,7 @@ Transform:
   m_GameObject: {fileID: 373216376}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.62}
+  m_LocalPosition: {x: 0, y: 0, z: 1.217}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1344,6 +1356,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: ProfPhoto
       objectReference: {fileID: 0}
+    - target: {fileID: 1630794972795428178, guid: 4b4705db33606a146b79ab1187358e93,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630794972795428178, guid: 4b4705db33606a146b79ab1187358e93,
+        type: 3}
+      propertyPath: m_Quality
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630794972795428178, guid: 4b4705db33606a146b79ab1187358e93,
+        type: 3}
+      propertyPath: m_UpdateWhenOffscreen
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7320214852899050856, guid: 4b4705db33606a146b79ab1187358e93,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1421,7 +1453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e325172de2e5854da98aede2c026bad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionText: Press E to talk
+  interactionText: "E pour parler \xE0 Mr.York"
   OnInteract:
     m_PersistentCalls:
       m_Calls:
@@ -1491,6 +1523,12 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!137 &1263917944 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1630794972795428178, guid: 4b4705db33606a146b79ab1187358e93,
+    type: 3}
+  m_PrefabInstance: {fileID: 1236575166}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1281084655
 GameObject:
   m_ObjectHideFlags: 0
@@ -2643,10 +2681,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 5
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":124,\"yPos\":334},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Continue\",\"parentUIDs\":[1],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":125,\"yPos\":-18},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bon
-    Blalalbalalalblablabla je te parle\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Dr.York\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":1,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":123,\"yPos\":179},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bon
-    j'ai finis\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Dr.York\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":118,\"yPos\":452},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tenez
-    Mr.York j'ai la photo dont vous aviez besoin.\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Louison\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":114,\"yPos\":599},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Merci
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":390,\"yPos\":425},\"ID\":2,\"ParamActions\":[{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"YorkTalking\",\"Value\":false}],\"TMPFontGUID\":null,\"Text\":\"Continue\",\"parentUIDs\":[1],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":397,\"yPos\":73},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bon
+    Blalalbalalalblablabla je te parle\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Dr.York\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":3,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":403,\"yPos\":265},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bon
+    j'ai finis\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Dr.York\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":386,\"yPos\":543},\"ID\":3,\"ParamActions\":[{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"YorkTalking\",\"Value\":false}],\"TMPFontGUID\":null,\"Text\":\"Tenez
+    Mr.York j'ai la photo dont vous aviez besoin.\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Louison\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":381,\"yPos\":690},\"ID\":4,\"ParamActions\":[{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"YorkTalking\",\"Value\":true}],\"TMPFontGUID\":null,\"Text\":\"Merci
     mais la j'ai pas le temps, va la donner \xE0 Mr.Clemons\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Dr.York\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: 
@@ -2665,7 +2703,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 919132148243996401}
         m_TargetAssemblyTypeName: TransitionAnimationDiscussion, Assembly-CSharp
-        m_MethodName: findelaconversation
+        m_MethodName: YorkNotTalking
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4615,7 +4653,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animatorYork: {fileID: 1236575168}
   Player: {fileID: 1581023641}
-  StopPosition: {fileID: 373216376}
+  StopPosition: {fileID: 373216377}
+  bodyYork: {fileID: 1263917944}
 --- !u!1 &919132148338411378
 GameObject:
   m_ObjectHideFlags: 0
