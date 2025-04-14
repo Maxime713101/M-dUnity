@@ -8,14 +8,14 @@ public class TransitionAnimationDiscussion : MonoBehaviour
 {
     public Animator animatorYork;
     public GameObject Player;
-    private bool IsTalking;
-    private bool Islookingplayer;
+    public bool IsTalking;
+    public bool Islookingplayer;
     private Vector3 CustomLookAt;
     public Transform StopPosition;
     private float speed = 1.0f;
-    private bool IsMoving;
+    public bool IsMoving;
     public SkinnedMeshRenderer bodyYork;
-    private bool yorkistalking = true;
+    //private bool yorkistalking = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,17 +56,17 @@ public class TransitionAnimationDiscussion : MonoBehaviour
             }
                      
         }
-        if(yorkistalking == false)
-        {
+        //if(yorkistalking == false)
+        //{
 
-            int index = bodyYork.sharedMesh.GetBlendShapeIndex("V_Lip_Open");
-            Debug.Log(index);
-            bodyYork.SetBlendShapeWeight(index, 0f);
-            bodyYork.SetBlendShapeWeight(0, 0f);
-            bodyYork.SetBlendShapeWeight(2, 0f);
-            bodyYork.SetBlendShapeWeight(3, 0f);
+        //    int index = bodyYork.sharedMesh.GetBlendShapeIndex("V_Lip_Open");
+        //    Debug.Log(index);
+        //    bodyYork.SetBlendShapeWeight(index, 0f);
+        //    bodyYork.SetBlendShapeWeight(0, 0f);
+        //    bodyYork.SetBlendShapeWeight(2, 0f);
+        //    bodyYork.SetBlendShapeWeight(3, 0f);
             
-        }
+        //}
         
     }
     IEnumerator Findelaconversation()
@@ -84,10 +84,11 @@ public class TransitionAnimationDiscussion : MonoBehaviour
     public void debutconversation()
     {
         animatorYork.SetBool("IsTalking", true);
+        IsTalking = true;
     }
-    public void YorkNotTalking()
-    {
-        yorkistalking = false;
+    //public void YorkNotTalking()
+    //{
+    //    yorkistalking = false;
         
-    }
+    //}
 }
