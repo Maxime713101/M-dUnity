@@ -20,6 +20,8 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject uiobjetinventaire;
     public GameObject LookatStart;
     public RapprochementMeduse Meduse;
+    public bool InteractionBoss;
+
     //private variable
     private bool IsTalking = false;
     private bool canInteract = true;
@@ -237,5 +239,12 @@ public class PlayerInteraction : MonoBehaviour
     {
         UnityEngine.Cursor.visible = false;
         
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "InteractionBoss")
+        {
+            InteractionBoss = true;
+        }
     }
 }

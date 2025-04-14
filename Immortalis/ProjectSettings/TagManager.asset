@@ -12,6 +12,7 @@ TagManager:
   - Meduse
   - "m\xE9duse"
   - Destruction
+  - InteractionBoss
   layers:
   - Default
   - TransparentFX
