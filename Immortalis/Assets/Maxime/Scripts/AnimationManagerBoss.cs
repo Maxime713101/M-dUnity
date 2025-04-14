@@ -9,19 +9,34 @@ public class AnimationManagerBoss : MonoBehaviour
     public Transform PlayerPosition;
     public Animator AnimatorPorteR;
     public Animator AnimatorPorteL;
-    public Camera cameraplayer;
+
+    public GameObject Player;
     private bool PlayermovFor = true;
     private bool PlayermovLeft = false;
     private Vector3 CustomLookAt; 
-    public UnityEvent OnPlayerEnter;
+    private Vector3 CustomLookAtPlayer;
+    private bool IsLeaving = false;
     public Transform PositionBossStop;
     public Transform BossLeavePosition;
+
     public Animator BossAnimator;
+
+    private int index;
+    private int indexBeginConv;
+
+    public GameObject EnterBox;
+
+    public UnityEvent OnPlayerEnter;
+    public UnityEvent BossDiscution;
+    public UnityEvent EndInteraction;
+
+
     // Start is called before the first frame update
     void Start()
     {
         PlayermovLeft = false;
         CustomLookAt = Vector3.zero;
+        CustomLookAtPlayer = Vector3.zero;
     }
 
     // Update is called once per frame
@@ -35,9 +50,15 @@ public class AnimationManagerBoss : MonoBehaviour
 
             AnimatorPorteR.SetBool("PlayerEnter",true);
             AnimatorPorteL.SetBool("PlayerEnter", true);
-            cameraplayer.transform.LookAt(this.transform);
+            CustomLookAtPlayer.Set(this.transform.position.x,Player.transform.position.y,this.transform.position.z);
+            Player.transform.LookAt(CustomLookAtPlayer);
+
+            if (indexBeginConv == 0) 
+            {
+                OnPlayerEnter.Invoke();
+                indexBeginConv += 1;
+            }
             
-            OnPlayerEnter.Invoke();
 
             //Le boss marche jusqu'a atteindre un certain point
             if (dist >= 1.2f)
@@ -48,28 +69,40 @@ public class AnimationManagerBoss : MonoBehaviour
             }
             else
             {
-                BossAnimator.SetBool("IsTalking", true);
+                if(index == 0)
+                {
+                    BossAnimator.SetBool("IsTalking", true);
+                    BossDiscution.Invoke();
+                    index += 1;
+                }
+                
             }
-            
 
-            if(PlayermovFor == true)
+
+            if (PlayermovFor == true)
             {
                 PlayerPosition.Translate(Vector3.forward * 2.0f * Time.deltaTime);
                 StartCoroutine(PlayerMovFor());
             }
-            else if (PlayermovLeft == true) 
+            else if (PlayermovLeft == true)
             {
                 PlayerPosition.Translate(Vector3.left * 1.0f * Time.deltaTime);
                 StartCoroutine(PlayerMovLeft());
             }
-            
-            
-            
         }
+
+
+        if (IsLeaving == true)
+        {
+            CustomLookAt.Set(BossLeavePosition.position.x, transform.position.y, BossLeavePosition.position.z);
+            transform.LookAt(CustomLookAt);
+            this.transform.Translate(Vector3.forward * 1.0f * Time.deltaTime);
+        }
+
     }
     private IEnumerator PlayerMovFor()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.3f);
         PlayermovFor = false;
         PlayermovLeft = true;
         
@@ -79,5 +112,28 @@ public class AnimationManagerBoss : MonoBehaviour
         yield return new WaitForSeconds(1);
         PlayermovLeft= false;
     }
-
+    private IEnumerator BossLeavingCoroutine()
+    {
+        yield return new WaitForSeconds(3);
+        PlayerInteraction.InteractionBoss = false;
+        AnimatorPorteL.SetBool("DoorClose",true);
+        AnimatorPorteR.SetBool("DoorClose", true);
+        EndInteraction.Invoke();
     }
+    public void BossLeaving()
+    {
+        BossAnimator.SetBool("IsLeaving", true);
+        IsLeaving = true;
+        Destroy(EnterBox);  
+        StartCoroutine(BossLeavingCoroutine());
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.name == "BossLeavePosition")
+        {
+            Debug.Log("Cool");
+        }
+    }
+
+}

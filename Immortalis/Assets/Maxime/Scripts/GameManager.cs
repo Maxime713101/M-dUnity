@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class GameManager : MonoBehaviour
 {
     public GameObject MenuPause;
-    public UnityEvent StopControl;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +21,16 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) 
         { 
             MenuPause.SetActive(true);
-            StopControl.Invoke();
+            Time.timeScale = 0;
+            
         }  
     }
     public void quitgame()
     {
         Application.Quit();
+    }
+    public void BackToGame()
+    {
+        Time.timeScale = 1;
     }
 }

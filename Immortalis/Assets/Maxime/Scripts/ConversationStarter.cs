@@ -27,13 +27,14 @@ public class ConversationStarter : MonoBehaviour
             {
                 interactiontext.SetActive(false);
                 ConversationManager.Instance.StartConversation(SecretaireConversations[0]);
-                //if (SecretaireConversations.Length > 1) 
-                //{
-                //    index += 1;
-                //}
-
+                if (SecretaireConversations.Length > 1) 
+                {
+                    index += 1;
+                }
+                
 
             }
+
             else if (index == 1)
             {
                 interactiontext.SetActive(false);
