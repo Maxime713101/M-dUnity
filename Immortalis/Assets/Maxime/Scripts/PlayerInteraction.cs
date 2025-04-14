@@ -22,6 +22,8 @@ public class PlayerInteraction : MonoBehaviour
     public RapprochementMeduse Meduse;
     public bool InteractionBoss;
 
+    private Animator AnimatorCurrentObject;
+
     //private variable
     private bool IsTalking = false;
     private bool canInteract = true;
@@ -40,7 +42,17 @@ public class PlayerInteraction : MonoBehaviour
     private float maxRotationY = 45f;
     private float minRotationX = -45f;  // Limite inférieure pour la rotation verticale (axe Y)
     private float maxRotationX = 45f;
-
+    bool HasParameter(Animator animator, string paramName, AnimatorControllerParameterType type)
+    {
+        foreach (AnimatorControllerParameter param in animator.parameters)
+        {
+            if (param.name == paramName && param.type == type)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 
     void Start()
     {
@@ -101,9 +113,16 @@ public class PlayerInteraction : MonoBehaviour
         // Interaction avec l'objet
         if (!IsTalking && canInteract && Input.GetKeyDown(KeyCode.E) && CurrentInteractable != null)
         {
+            AnimatorCurrentObject = CurrentInteractable.GetComponentInChildren<Animator>();
+
             CurrentInteractable?.Interact();
             RemoveOutline();
             MouseVisible();
+
+            if (HasParameter(AnimatorCurrentObject, "Talking", AnimatorControllerParameterType.Bool))
+            {
+                AnimatorCurrentObject.SetBool("Talking", true);
+            }
 
             if (CurrentInteractable.tag == "humain")
             {
@@ -165,6 +184,9 @@ public class PlayerInteraction : MonoBehaviour
             
             
         }
+
+        
+
     }
 
 
@@ -226,9 +248,6 @@ public class PlayerInteraction : MonoBehaviour
                 //lancer phrase d'echec
             }
         }
-
-
-
     }
     public void MouseVisible()
     {
@@ -240,6 +259,16 @@ public class PlayerInteraction : MonoBehaviour
         UnityEngine.Cursor.visible = false;
         
     }
+
+    public void PNJStopTalking()
+    {
+
+        if (HasParameter(AnimatorCurrentObject, "Talking", AnimatorControllerParameterType.Bool))
+        {
+            AnimatorCurrentObject.SetBool("Talking", false);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "InteractionBoss")

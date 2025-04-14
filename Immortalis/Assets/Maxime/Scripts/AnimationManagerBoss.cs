@@ -102,7 +102,7 @@ public class AnimationManagerBoss : MonoBehaviour
     }
     private IEnumerator PlayerMovFor()
     {
-        yield return new WaitForSeconds(1.3f);
+        yield return new WaitForSeconds(1.4f);
         PlayermovFor = false;
         PlayermovLeft = true;
         

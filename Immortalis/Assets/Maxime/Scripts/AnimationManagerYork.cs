@@ -81,6 +81,10 @@ public class TransitionAnimationDiscussion : MonoBehaviour
         StartCoroutine(Findelaconversation());
         
     }
+    public void fininteraction()
+    {
+        Islookingplayer = false;
+    }
     public void debutconversation()
     {
         animatorYork.SetBool("IsTalking", true);

@@ -46,11 +46,20 @@ public class ConversationStarter : MonoBehaviour
                 interactiontext.SetActive(false);
                 ConversationManager.Instance.StartConversation(SecretaireConversations[2]);
             }
+            else if (index == 3)
+            {
+                interactiontext.SetActive(false);
+                ConversationManager.Instance.StartConversation(SecretaireConversations[3]);
+            }
 
         }
 
     }
     public void recupproduitchimique()
+    {
+        index = 3;
+    }
+    public void portechimiqueouverte()
     {
         index = 2;
     }
