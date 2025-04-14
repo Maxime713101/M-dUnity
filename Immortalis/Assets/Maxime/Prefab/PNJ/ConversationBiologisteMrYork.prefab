@@ -1,0 +1,259 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2801427115736975333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8915001480218396237}
+  m_Layer: 0
+  m_Name: ConversationBiologisteMrYork
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8915001480218396237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2801427115736975333}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.89495426, y: -9.316506, z: -10.671047}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2626751551400940178}
+  - {fileID: 1729850429188066561}
+  - {fileID: 7675023512170545099}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6022897663701840138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7675023512170545099}
+  - component: {fileID: 1969501609784754950}
+  m_Layer: 0
+  m_Name: DisparitionPoint
+  m_TagString: Destruction
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7675023512170545099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022897663701840138}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 19.445045, y: 10.816506, z: -4.284317}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8915001480218396237}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1969501609784754950
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022897663701840138}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &648218933371262236
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8915001480218396237}
+    m_Modifications:
+    - target: {fileID: 3209649474585708430, guid: eb23867fe6c21ca438331ea502b22dad,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.287989
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209649474585708430, guid: eb23867fe6c21ca438331ea502b22dad,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.816506
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209649474585708430, guid: eb23867fe6c21ca438331ea502b22dad,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.324028
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209649474585708430, guid: eb23867fe6c21ca438331ea502b22dad,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.49999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209649474585708430, guid: eb23867fe6c21ca438331ea502b22dad,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209649474585708430, guid: eb23867fe6c21ca438331ea502b22dad,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.86602545
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209649474585708430, guid: eb23867fe6c21ca438331ea502b22dad,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209649474585708430, guid: eb23867fe6c21ca438331ea502b22dad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209649474585708430, guid: eb23867fe6c21ca438331ea502b22dad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209649474585708430, guid: eb23867fe6c21ca438331ea502b22dad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554102014018255712, guid: eb23867fe6c21ca438331ea502b22dad,
+        type: 3}
+      propertyPath: m_Name
+      value: PNJ_Biologiste02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994962939859359530, guid: eb23867fe6c21ca438331ea502b22dad,
+        type: 3}
+      propertyPath: DisparitionPoint
+      value: 
+      objectReference: {fileID: 7675023512170545099}
+    - target: {fileID: 7994962939859359530, guid: eb23867fe6c21ca438331ea502b22dad,
+        type: 3}
+      propertyPath: AnimationManagerMrYork
+      value: 
+      objectReference: {fileID: 2114382979346074594}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eb23867fe6c21ca438331ea502b22dad, type: 3}
+--- !u!4 &2626751551400940178 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3209649474585708430, guid: eb23867fe6c21ca438331ea502b22dad,
+    type: 3}
+  m_PrefabInstance: {fileID: 648218933371262236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5708944714844081130
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8915001480218396237}
+    m_Modifications:
+    - target: {fileID: 6285783955877644011, guid: 5ba917bd55a01c7419120c76a53a6ab6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 22.205046
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285783955877644011, guid: 5ba917bd55a01c7419120c76a53a6ab6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.816506
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285783955877644011, guid: 5ba917bd55a01c7419120c76a53a6ab6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.83104706
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285783955877644011, guid: 5ba917bd55a01c7419120c76a53a6ab6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.83845234
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285783955877644011, guid: 5ba917bd55a01c7419120c76a53a6ab6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285783955877644011, guid: 5ba917bd55a01c7419120c76a53a6ab6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.54497504
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285783955877644011, guid: 5ba917bd55a01c7419120c76a53a6ab6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285783955877644011, guid: 5ba917bd55a01c7419120c76a53a6ab6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285783955877644011, guid: 5ba917bd55a01c7419120c76a53a6ab6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -426.046
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285783955877644011, guid: 5ba917bd55a01c7419120c76a53a6ab6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9179621213418520787, guid: 5ba917bd55a01c7419120c76a53a6ab6,
+        type: 3}
+      propertyPath: m_Name
+      value: PNJ_MrYork
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5ba917bd55a01c7419120c76a53a6ab6, type: 3}
+--- !u!4 &1729850429188066561 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6285783955877644011, guid: 5ba917bd55a01c7419120c76a53a6ab6,
+    type: 3}
+  m_PrefabInstance: {fileID: 5708944714844081130}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2114382979346074594 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5939670555537833992, guid: 5ba917bd55a01c7419120c76a53a6ab6,
+    type: 3}
+  m_PrefabInstance: {fileID: 5708944714844081130}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769ced8682ec1634ba1b00fcd98a2641, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
