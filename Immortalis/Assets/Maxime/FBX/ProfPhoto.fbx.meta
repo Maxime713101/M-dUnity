@@ -3,7 +3,107 @@ guid: 4b4705db33606a146b79ab1187358e93
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ChaussureBase
+    second: {fileID: 2100000, guid: a4fed8d2ec74b7f479b20b663f81fadf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ChaussureFils
+    second: {fileID: 2100000, guid: ac02f9eda1077f6458f34bccccf84a0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cils
+    second: {fileID: 2100000, guid: 53c75068e2866f345ad20336f3431220, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cornea_L
+    second: {fileID: 2100000, guid: 32a75a6b99c5143408fbeb14a60b7de6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cornea_R
+    second: {fileID: 2100000, guid: f9f4dbf8c4cb7424989482d0870004b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eye_L
+    second: {fileID: 2100000, guid: 069edb5a334f7c34f803518d4e5378eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eye_Occlusion_L
+    second: {fileID: 2100000, guid: aef1e8ff4d650994baa5047db2e2ef2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eye_Occlusion_R
+    second: {fileID: 2100000, guid: 69c8aeac0f838a445af6880131a8eb53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eye_R
+    second: {fileID: 2100000, guid: 26cf8e2f6c73c9d47b55209131eaeb58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fils
+    second: {fileID: 2100000, guid: ee2af468444264f42946a5c026c15404, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair_Transparency.001
+    second: {fileID: 2100000, guid: 28758e4e5378760478c528d7b827a94e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 87d63efc4bc60754093011458f2b51fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 1fabb0e82cc53eb419d1587a6ab559b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 8a4677638289631418117a62c370093b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ongles
+    second: {fileID: 2100000, guid: 06bed0758c6ed2340af79e3a06cd3971, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Peau
+    second: {fileID: 2100000, guid: f5e42debb374a5b4cb824e62c2d9f930, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scalp1_Transparency
+    second: {fileID: 2100000, guid: 73a7756032b476349a041445ebf11daa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tearline_L
+    second: {fileID: 2100000, guid: e1db7b6d5a7f0a24fb9c088eddb1d3f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tearline_R
+    second: {fileID: 2100000, guid: 046cf235e6a8b104dbd86dc6f8f6176c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Truc
+    second: {fileID: 2100000, guid: 3670d367a6293984b94d56dcbcc0da74, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
