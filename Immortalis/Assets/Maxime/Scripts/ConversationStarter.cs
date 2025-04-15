@@ -51,16 +51,60 @@ public class ConversationStarter : MonoBehaviour
                 interactiontext.SetActive(false);
                 ConversationManager.Instance.StartConversation(SecretaireConversations[3]);
             }
+            else if (index == 4)
+            {
+                interactiontext.SetActive(false);
+                ConversationManager.Instance.StartConversation(SecretaireConversations[4]);
+            }
+            else if (index == 5)
+            {
+                interactiontext.SetActive(false);
+                ConversationManager.Instance.StartConversation(SecretaireConversations[5]);
+            }
+            else if (index == 6)
+            {
+                interactiontext.SetActive(false);
+                ConversationManager.Instance.StartConversation(SecretaireConversations[6]);
+            }
+            else if (index == 7)
+            {
+                interactiontext.SetActive(false);
+                ConversationManager.Instance.StartConversation(SecretaireConversations[7]);
+            }
+            else if (index == 8)
+            {
+                interactiontext.SetActive(false);
+                ConversationManager.Instance.StartConversation(SecretaireConversations[8]);
+            }
+            else if (index == 9)
+            {
+                interactiontext.SetActive(false);
+                ConversationManager.Instance.StartConversation(SecretaireConversations[9]);
+            }
+
 
         }
 
     }
     public void recupproduitchimique()
     {
-        index = 3;
+        index = 5;
     }
-    public void portechimiqueouverte()
+    public void SecretaireDemandeouverturePorteSeul()
     {
         index = 2;
     }
+    public void portechimiqueouverte()
+    {
+        index = 3;
+    }
+    public void SecretairephraseBateau()
+    {
+        index = 4;
+    }
+    public void PhotoPriseOnchercheMrYork()
+    {
+        index = 6;
+    }
+
 }

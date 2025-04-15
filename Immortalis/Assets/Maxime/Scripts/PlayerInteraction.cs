@@ -119,10 +119,14 @@ public class PlayerInteraction : MonoBehaviour
             RemoveOutline();
             MouseVisible();
 
-            if (HasParameter(AnimatorCurrentObject, "Talking", AnimatorControllerParameterType.Bool))
+            if (AnimatorCurrentObject != null) 
             {
-                AnimatorCurrentObject.SetBool("Talking", true);
+                if (HasParameter(AnimatorCurrentObject, "Talking", AnimatorControllerParameterType.Bool))
+                {
+                    AnimatorCurrentObject.SetBool("Talking", true);
+                }
             }
+            
 
             if (CurrentInteractable.tag == "humain")
             {
@@ -242,6 +246,7 @@ public class PlayerInteraction : MonoBehaviour
             {
                 inventaireimage[1].sprite = imageobjet[2].sprite;
                 uiobjetinventaire.SetActive(true);
+                Meduse.PhotoMedusebon();
             }
             else
             {

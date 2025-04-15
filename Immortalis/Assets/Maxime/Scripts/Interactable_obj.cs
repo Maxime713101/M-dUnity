@@ -18,8 +18,5 @@ public class Interactable_obj : MonoBehaviour
     {
         OnInteract.Invoke();
     }
-    public void DialogueTextSystem()
-    {
 
-    }
 }

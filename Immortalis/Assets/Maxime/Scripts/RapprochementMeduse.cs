@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Events;
 
 public class RapprochementMeduse : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class RapprochementMeduse : MonoBehaviour
     private float speed = 1f;
     private bool MeduseMoving;
     public bool MeduseIsCloser;
+
+    public UnityEvent PhotoMeduseBon;
 
     // Start is called before the first frame update
     void Start()
@@ -26,8 +29,7 @@ public class RapprochementMeduse : MonoBehaviour
         {
             Meduse.transform.Translate(Vector3.left * speed * Time.deltaTime);
 
-        }
-        
+        }     
 
     }
    
@@ -47,5 +49,9 @@ public class RapprochementMeduse : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         MeduseMoving = false;
+    }
+    public void PhotoMedusebon()
+    {
+        PhotoMeduseBon.Invoke();
     }
 }
