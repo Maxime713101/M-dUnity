@@ -41,7 +41,11 @@ public class AnimationManagerBiologiste02 : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
-        Debug.Log("coucou");
+        if(other.tag == "Destruction")
+        {
+            Destroy(gameObject);
+            Debug.Log("coucou");
+        }
+        
     }
 }

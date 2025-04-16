@@ -6,7 +6,7 @@ using UnityEngine;
 public class ConversationStarter : MonoBehaviour
 {
     [SerializeField] private NPCConversation[] SecretaireConversations;
-    private int index = 0;
+    public int index = 0;
     public GameObject interactiontext;
     // Start is called before the first frame update
     void Start()
