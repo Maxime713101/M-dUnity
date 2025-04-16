@@ -20,6 +20,8 @@ public class NoahDrawing : MonoBehaviour
     public GameObject DessinNoahPasFinit;
     public GameObject DessinNoahFinit;
 
+    public GameObject Crayon;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,10 +70,12 @@ public class NoahDrawing : MonoBehaviour
 
         if(uiobjetproche != null)
         {
-
+            TextMeshProUGUI[] textuiobjet = uiobjetproche.GetComponentsInChildren<TextMeshProUGUI>();
             MeshFilter meshui = uiobjetproche.GetComponentInChildren<MeshFilter>();
             MeshRenderer uirenderer = uiobjetproche.GetComponentInChildren<MeshRenderer>();
 
+            textuiobjet[0].text = "Dessin de Noah";
+            textuiobjet[1].text = "";
             meshui.mesh = DessinMesh.mesh;
             uirenderer.materials = DessinTexture.materials;
         }
