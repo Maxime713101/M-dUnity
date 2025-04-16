@@ -8,9 +8,10 @@ public class RapprochementMeduse : MonoBehaviour
 {
     public GameObject Meduse;
     public GameObject PositionFinalMeduse;
-    private float speed = 1f;
+    private float speed = 0.5f;
     private bool MeduseMoving;
     public bool MeduseIsCloser;
+    public GameObject Player;
 
     public UnityEvent PhotoMeduseBon;
 
@@ -24,10 +25,14 @@ public class RapprochementMeduse : MonoBehaviour
     void Update()
     {
         float positionFinalMeduse = PositionFinalMeduse.transform.position.x;
+        float dist = Vector3.Distance(Meduse.transform.position, PositionFinalMeduse.transform.position);
+        Vector3 CustomLookAt = new Vector3(Player.transform.position.x,Meduse.transform.position.y, Player.transform.position.z);
 
-        if (MeduseMoving == true && positionFinalMeduse < Meduse.transform.position.x)
+    
+        if (MeduseMoving == true && dist>0.8f)
         {
-            Meduse.transform.Translate(Vector3.left * speed * Time.deltaTime);
+            Meduse.transform.LookAt(CustomLookAt);
+            Meduse.transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
         }     
 

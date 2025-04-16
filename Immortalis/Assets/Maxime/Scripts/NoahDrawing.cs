@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class NoahDrawing : MonoBehaviour
 {
@@ -12,6 +13,14 @@ public class NoahDrawing : MonoBehaviour
     public MeshFilter DessinMesh;
     public MeshRenderer DessinTexture;
     public GameObject uiobjetproche;
+    public GameObject BoutonRecuperObjet;
+
+    public GameObject DescriptionObjet;
+
+    public GameObject DessinNoahPasFinit;
+    public GameObject DessinNoahFinit;
+
+    public GameObject Crayon;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +52,8 @@ public class NoahDrawing : MonoBehaviour
                     NoahAnimator.SetBool("IsDrawing", false);
                     PerfusionNoahDrawing.SetActive(false);
                     PerfusionNoahIdle.SetActive(true);
+                    DessinNoahFinit.SetActive(true);
+                    DessinNoahPasFinit.SetActive(false);
                 }
 
             }
@@ -55,15 +66,24 @@ public class NoahDrawing : MonoBehaviour
     public void RegarderDessinNoah()
     {
         uiobjetproche.SetActive(true);
+        BoutonRecuperObjet.SetActive(false);
 
         if(uiobjetproche != null)
         {
+            TextMeshProUGUI[] textuiobjet = uiobjetproche.GetComponentsInChildren<TextMeshProUGUI>();
             MeshFilter meshui = uiobjetproche.GetComponentInChildren<MeshFilter>();
             MeshRenderer uirenderer = uiobjetproche.GetComponentInChildren<MeshRenderer>();
 
+            textuiobjet[0].text = "Dessin de Noah";
+            textuiobjet[1].text = "";
             meshui.mesh = DessinMesh.mesh;
             uirenderer.materials = DessinTexture.materials;
         }
 
+    }
+    public void FinitConversationNoah()
+    {
+        BoutonRecuperObjet.SetActive(true);
+        uiobjetproche.SetActive(false);
     }
 }
