@@ -68,8 +68,7 @@ public class ConversationStarter : MonoBehaviour
             }
             else if (index == 7)
             {
-                interactiontext.SetActive(false);
-                ConversationManager.Instance.StartConversation(SecretaireConversations[7]);
+                
             }
             else if (index == 8)
             {
@@ -105,6 +104,17 @@ public class ConversationStarter : MonoBehaviour
     public void PhotoPriseOnchercheMrYork()
     {
         index = 6;
+    }
+    public void DiscussionVide()
+    {
+        if (index != 2)
+        {
+            index = 7;
+        }  
+    }
+    public void DiscussionVideForcer()
+    {
+        index = 7;
     }
 
 }

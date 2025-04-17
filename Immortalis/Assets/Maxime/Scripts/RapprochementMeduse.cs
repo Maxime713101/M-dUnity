@@ -14,7 +14,8 @@ public class RapprochementMeduse : MonoBehaviour
     public GameObject Player;
 
     public UnityEvent PhotoMeduseBon;
-
+    public UnityEvent MeduseAssezProche;
+    public UnityEvent PlayerParleMeduse;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,10 +46,12 @@ public class RapprochementMeduse : MonoBehaviour
         if(other.tag == "Player")
         {
             MeduseMoving = true;
+            PlayerParleMeduse.Invoke();
         }
         if (other.tag == "Meduse")
         {
             MeduseIsCloser = true;
+            MeduseAssezProche.Invoke();
         }
     }
     private void OnTriggerExit(Collider other)

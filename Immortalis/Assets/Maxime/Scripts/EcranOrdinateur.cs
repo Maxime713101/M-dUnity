@@ -37,7 +37,7 @@ public class EcranOrdinateur : MonoBehaviour
     }
     public void checkCode()
     {
-        if(codetext.text == "0123")
+        if(codetext.text == "10495")
         {
             
             PanelEnterCode.SetActive(false);

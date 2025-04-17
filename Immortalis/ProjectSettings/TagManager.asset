@@ -13,6 +13,7 @@ TagManager:
   - "m\xE9duse"
   - Destruction
   - InteractionBoss
+  - JournalDeplie
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Objet
   - ObjetBon
   - ProcesingAppareilPhoto
-  - 
+  - Collider
   - 
   - 
   - 

@@ -22,6 +22,7 @@ public class PlayerInteraction : MonoBehaviour
     public RapprochementMeduse Meduse;
     public bool InteractionBoss;
 
+
     private Animator AnimatorCurrentObject;
 
     //private variable
@@ -133,6 +134,7 @@ public class PlayerInteraction : MonoBehaviour
 
                 Cam.transform.LookAt(CurrentInteractable.transform);
             }
+
             else if(CurrentInteractable.tag == "Objet" || CurrentInteractable.tag =="ObjetBon")           
             {
                 uiobjetproche.SetActive(true);
@@ -152,12 +154,12 @@ public class PlayerInteraction : MonoBehaviour
                     textuiobjet[0].text = CurrentInteractable.name;
                     textuiobjet[1].text = descriptioncurrentobjet.text;
 
-                    player_controller.BeginConversation();
+                    //player_controller.BeginConversation();
                     
 
                     if (CurrentInteractable.tag == "Objet")
                     {
-                        textuiobjet[2].text = "Revnir en arrière";
+                        textuiobjet[2].text = "Revenir en arrière";
                     }
                     else 
                     {
@@ -168,7 +170,33 @@ public class PlayerInteraction : MonoBehaviour
                 
         
             }
+            else if(CurrentInteractable.tag == "JournalDeplie")
+            {
+                uiobjetproche.SetActive(true);
+
+                if (uiobjetproche != null)
+                {
+                    TextMeshProUGUI descriptioncurrentobjet = CurrentInteractable.GetComponentInChildren<TextMeshProUGUI>();
+                    TextMeshProUGUI[] textuiobjet = uiobjetproche.GetComponentsInChildren<TextMeshProUGUI>();
+                    MeshFilter[] meshcurrentobjet = CurrentInteractable.GetComponentsInChildren<MeshFilter>();
+                    MeshFilter meshui = uiobjetproche.GetComponentInChildren<MeshFilter>();
+                    MeshRenderer[] currentobjetrenderer = CurrentInteractable.GetComponentsInChildren<MeshRenderer>();
+                    MeshRenderer uirenderer = uiobjetproche.GetComponentInChildren<MeshRenderer>();
+
+                    //donner les caracteristique du current objet à l'ui (le nom de l'objet, sa description et son mesh)
+                    meshui.mesh = meshcurrentobjet[1].mesh;
+                    uirenderer.materials = currentobjetrenderer[1].materials;
+                    textuiobjet[0].text = CurrentInteractable.name;
+                    textuiobjet[1].text = descriptioncurrentobjet.text;
+
+                    //player_controller.BeginConversation();
+
+                    textuiobjet[2].text = "Revenir en arrière";
+
+                }
+            }
         }
+
         //Pouvoir faire tourner l'objet lorsque uiobjetproche est actif
         if (uiobjetproche != null)
         {
