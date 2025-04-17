@@ -8,7 +8,7 @@ public class Menu_Script : MonoBehaviour
 {
 public void startgame()
     {
-        SceneManager.LoadScene("MaximeScene");
+        SceneManager.LoadScene("LaurieScene");
     }
 public void quitgame()
     {

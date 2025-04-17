@@ -33,6 +33,7 @@ public class PlayerInteraction : MonoBehaviour
     private Interactable_obj CurrentInteractable;
     private Renderer currentRenderer;
     private Material[] originalMaterials; // Sauvegarde des matériaux de base
+    private int index=0;
 
     //Rotation des objets
     private float currentRotationX = 0f;
@@ -59,13 +60,20 @@ public class PlayerInteraction : MonoBehaviour
     {
         IsTalking = false;
         player_controller = GetComponent<Player_controller>();
-        Cam.transform.LookAt(LookatStart.transform);
+        Vector3 CustomLookAtStart = new Vector3(LookatStart.transform.position.x, this.transform.position.y, LookatStart.transform.position.z);
+        this.transform.LookAt(CustomLookAtStart);
         MouseNotVisible();   
     }
 
     // sUpdate is called once per frame
     void Update()
     {
+        Vector3 CustomLookAtStart = new Vector3(LookatStart.transform.position.x, this.transform.position.y, LookatStart.transform.position.z);
+        if (index < 2)
+        {
+            this.transform.LookAt(CustomLookAtStart);
+            index += 1;
+        }
         Ray ray = Cam.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
         RaycastHit hit;
 
@@ -131,8 +139,8 @@ public class PlayerInteraction : MonoBehaviour
 
             if (CurrentInteractable.tag == "humain")
             {
-
-                Cam.transform.LookAt(CurrentInteractable.transform);
+                Vector3 CustoomLookAtPNJ = new Vector3(CurrentInteractable.transform.position.x, this.transform.position.y, CurrentInteractable.transform.position.z);
+                Cam.transform.LookAt(CustoomLookAtPNJ);
             }
 
             else if(CurrentInteractable.tag == "Objet" || CurrentInteractable.tag =="ObjetBon")           
@@ -164,7 +172,7 @@ public class PlayerInteraction : MonoBehaviour
                     else 
                     {
                         textuiobjet[2].text = "Prendre l'objet";
-                        CurrentInteractable.gameObject.SetActive(false);
+                        
                     }
                 }
                 
@@ -300,6 +308,15 @@ public class PlayerInteraction : MonoBehaviour
         {
             AnimatorCurrentObject.SetBool("Talking", false);
         }
+    }
+
+    public void prendreObjet()
+    {
+        if(CurrentInteractable != null)
+        {
+            CurrentInteractable.gameObject.SetActive(false);
+        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
