@@ -19,6 +19,7 @@ public class AnimationManagerBoss : MonoBehaviour
     public Transform PositionBossStop;
     public Transform BossLeavePosition;
     public GameObject PorteOpening;
+    public GameObject PorteClosing;
     public Animator BossAnimator;
 
     private int index;
@@ -76,7 +77,7 @@ public class AnimationManagerBoss : MonoBehaviour
                     BossAnimator.SetBool("IsTalking", true);
                     BossDiscution.Invoke();
                     index += 1;
-                    //PorteOpening.SetActive(false);
+                   
                 }
                 
             }
@@ -121,7 +122,7 @@ public class AnimationManagerBoss : MonoBehaviour
         PlayerInteraction.InteractionBoss = false;
         AnimatorPorteL.SetBool("DoorClose",true);
         AnimatorPorteR.SetBool("DoorClose", true);
-        PorteOpening.SetActive(true);
+        PorteClosing.SetActive(true);
         EndInteraction.Invoke();
     }
     public void BossLeaving()
