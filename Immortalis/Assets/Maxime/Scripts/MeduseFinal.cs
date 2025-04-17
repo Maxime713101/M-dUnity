@@ -9,7 +9,8 @@ public class MeduseFinal : MonoBehaviour
     public GameObject Player;
     public GameObject ParticuleElectricité;
     public GameObject lights;
-
+    private AudioSource[] BoutonAudio;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +24,13 @@ public class MeduseFinal : MonoBehaviour
     }
     public void AppuyerSurBouton()
     {
+        BoutonAudio = GetComponents<AudioSource>();
         Animator[] MeduseFinalAnimator = MeduseFinals.GetComponentsInChildren<Animator>();
         Player.transform.LookAt(LookAt);
         ParticuleElectricité.SetActive(true);
         lights.SetActive(true);
+        BoutonAudio[0].Play();
+        BoutonAudio[1].Play();
         for(int i = 0; i<12; i++)
         {
             MeduseFinalAnimator[i].speed = 5.0f;
