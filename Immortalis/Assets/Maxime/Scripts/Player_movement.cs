@@ -11,6 +11,8 @@ public class Player_movement : MonoBehaviour
     private Vector3 Rotation;
     private Vector3 Camerarotation;
     private Rigidbody rgb;
+    private float xRotation = 0f;
+    public bool canLook = true; // <--- pour activer/désactiver la caméra
     void Start()
     {
         rgb = GetComponent<Rigidbody>();
@@ -26,6 +28,8 @@ public class Player_movement : MonoBehaviour
     }
     public void cameraRotate(Vector3 _camerarotation)
     {
+        if (!canLook) return;
+
         Camerarotation = _camerarotation;
     }
     public void FixedUpdate()
@@ -42,8 +46,17 @@ public class Player_movement : MonoBehaviour
     }
     private void PerformRotation()
     {
-        rgb.MoveRotation(rgb.rotation * Quaternion.Euler(Rotation));
-        cam.transform.Rotate(- Camerarotation);
+        if (canLook)
+        {
+            // Rotation du corps
+            rgb.MoveRotation(rgb.rotation * Quaternion.Euler(Rotation));
+
+            // Rotation de la caméra (verticale)
+            xRotation -= Camerarotation.x;
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f); // Limite haut/bas
+
+            cam.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        }
     }
     public void StopVelocity()
     {

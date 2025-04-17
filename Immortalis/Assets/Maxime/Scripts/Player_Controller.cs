@@ -51,9 +51,13 @@ public class Player_controller : MonoBehaviour
     public void BeginConversation()
     {
         IsTalking = true;
+        PlayerMov.canLook = false; // bloque la rotation
+        PlayerMov.StopVelocity();  // arrête le mouvement
+
     }
     public void EndConversation()
     {
         IsTalking = false;
+        PlayerMov.canLook = true;
     }
 }

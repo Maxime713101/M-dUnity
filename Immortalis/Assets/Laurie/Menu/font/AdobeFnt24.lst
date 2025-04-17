@@ -1,0 +1,93 @@
+%!Adobe-FontList 1.24
+%Locale:0x40c
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:C:\Users\Maxime\Documents\Perso\M-dUnity\Immortalis\Assets\Laurie\Menu\Font\TCM____ SDF.asset
+FileModTime:1744845720
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:C:\Users\Maxime\Documents\Perso\M-dUnity\Immortalis\Assets\Laurie\Menu\Font\TCM____ SDF.asset.meta
+FileModTime:1744731935
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:TwCenMT-Regular
+FamilyName:Tw Cen MT
+StyleName:Regular
+FullName:Tw Cen MT
+MenuName:Tw Cen MT
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\Maxime\Documents\Perso\M-dUnity\Immortalis\Assets\Laurie\Menu\Font\TCM____.TTF
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:76252
+FileModTime:1744731935
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Tw Cen MT
+NameArray:0,Win,1,Tw Cen MT
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:C:\Users\Maxime\Documents\Perso\M-dUnity\Immortalis\Assets\Laurie\Menu\Font\TCM____.TTF.meta
+FileModTime:1744731935
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:C:\Users\Maxime\Documents\Perso\M-dUnity\Immortalis\Assets\Laurie\Menu\Font\TW CEN MT BOLD SDF.asset
+FileModTime:1744924789
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:C:\Users\Maxime\Documents\Perso\M-dUnity\Immortalis\Assets\Laurie\Menu\Font\TW CEN MT BOLD SDF.asset.meta
+FileModTime:1744731935
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:TwCenMT-Bold
+FamilyName:Tw Cen MT
+StyleName:Bold
+FullName:Tw Cen MT Bold
+MenuName:Tw Cen MT
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\Users\Maxime\Documents\Perso\M-dUnity\Immortalis\Assets\Laurie\Menu\Font\TW CEN MT BOLD.TTF
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:67232
+FileModTime:1744731935
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Tw Cen MT Bold
+NameArray:0,Win,1,Tw Cen MT
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:C:\Users\Maxime\Documents\Perso\M-dUnity\Immortalis\Assets\Laurie\Menu\Font\TW CEN MT BOLD.TTF.meta
+FileModTime:1744731935
+%EndFont
+

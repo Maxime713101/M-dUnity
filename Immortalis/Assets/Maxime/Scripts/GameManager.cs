@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) 
         { 
             MenuPause.SetActive(true);
+            UnityEngine.Cursor.visible = true;
             Time.timeScale = 0;
             
         }  
