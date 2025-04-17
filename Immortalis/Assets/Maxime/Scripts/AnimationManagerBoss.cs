@@ -18,7 +18,7 @@ public class AnimationManagerBoss : MonoBehaviour
     private bool IsLeaving = false;
     public Transform PositionBossStop;
     public Transform BossLeavePosition;
-
+    public GameObject PorteOpening;
     public Animator BossAnimator;
 
     private int index;
@@ -50,6 +50,7 @@ public class AnimationManagerBoss : MonoBehaviour
 
             AnimatorPorteR.SetBool("PlayerEnter",true);
             AnimatorPorteL.SetBool("PlayerEnter", true);
+            PorteOpening.SetActive(true);
             CustomLookAtPlayer.Set(this.transform.position.x,Player.transform.position.y,this.transform.position.z);
             Player.transform.LookAt(CustomLookAtPlayer);
 
@@ -66,6 +67,7 @@ public class AnimationManagerBoss : MonoBehaviour
                 this.transform.Translate(Vector3.forward * 1.0f * Time.deltaTime);
                 CustomLookAt.Set(PlayerPosition.position.x, transform.position.y, PlayerPosition.position.z);
                 transform.LookAt(CustomLookAt);
+
             }
             else
             {
@@ -74,6 +76,7 @@ public class AnimationManagerBoss : MonoBehaviour
                     BossAnimator.SetBool("IsTalking", true);
                     BossDiscution.Invoke();
                     index += 1;
+                    //PorteOpening.SetActive(false);
                 }
                 
             }
@@ -118,6 +121,7 @@ public class AnimationManagerBoss : MonoBehaviour
         PlayerInteraction.InteractionBoss = false;
         AnimatorPorteL.SetBool("DoorClose",true);
         AnimatorPorteR.SetBool("DoorClose", true);
+        PorteOpening.SetActive(true);
         EndInteraction.Invoke();
     }
     public void BossLeaving()

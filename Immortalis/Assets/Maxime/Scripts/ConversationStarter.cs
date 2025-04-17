@@ -116,5 +116,9 @@ public class ConversationStarter : MonoBehaviour
     {
         index = 7;
     }
+    public void MissionFinis()
+    {
+        index = 8;
+    }
 
 }

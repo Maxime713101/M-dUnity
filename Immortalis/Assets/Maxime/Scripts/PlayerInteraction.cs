@@ -162,8 +162,8 @@ public class PlayerInteraction : MonoBehaviour
                     textuiobjet[0].text = CurrentInteractable.name;
                     textuiobjet[1].text = descriptioncurrentobjet.text;
 
-                    //player_controller.BeginConversation();
-                    
+                    player_controller.BeginConversation();
+
 
                     if (CurrentInteractable.tag == "Objet")
                     {
@@ -197,7 +197,7 @@ public class PlayerInteraction : MonoBehaviour
                     textuiobjet[0].text = CurrentInteractable.name;
                     textuiobjet[1].text = descriptioncurrentobjet.text;
 
-                    //player_controller.BeginConversation();
+                    player_controller.BeginConversation();
 
                     textuiobjet[2].text = "Revenir en arrière";
 
