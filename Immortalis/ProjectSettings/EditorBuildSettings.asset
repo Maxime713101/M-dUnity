@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/LaurieScene.unity
     guid: 3d333ec5ce7f9834bbcec40eb1ef66d9
+  - enabled: 1
+    path: Assets/GeneriqueFin.unity
+    guid: 335d1e548dd374240a0ad1a18fec10de
   m_configObjects: {}

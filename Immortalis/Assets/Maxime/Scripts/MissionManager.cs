@@ -72,7 +72,7 @@ public class MissionManager : MonoBehaviour
 
     public void TacheFinal()
     {
-        TachePhotoDoSpr.SetActive(false);
+        
         TacheFinalSpr.SetActive(true);
     }
     public void TacheFinalDisparait()

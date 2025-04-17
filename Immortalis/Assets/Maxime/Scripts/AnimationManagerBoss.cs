@@ -20,6 +20,7 @@ public class AnimationManagerBoss : MonoBehaviour
     public Transform BossLeavePosition;
     public GameObject PorteOpening;
     public GameObject PorteClosing;
+    public GameObject HallAudio;
     public Animator BossAnimator;
 
     private int index;
@@ -123,6 +124,7 @@ public class AnimationManagerBoss : MonoBehaviour
         AnimatorPorteL.SetBool("DoorClose",true);
         AnimatorPorteR.SetBool("DoorClose", true);
         PorteClosing.SetActive(true);
+        HallAudio.SetActive(false);
         EndInteraction.Invoke();
     }
     public void BossLeaving()

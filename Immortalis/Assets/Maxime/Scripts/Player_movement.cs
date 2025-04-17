@@ -7,7 +7,7 @@ public class Player_movement : MonoBehaviour
 {
     public Camera cam;
     // Start is called before the first frame update
-    private Vector3 Velocity;
+    public Vector3 Velocity;
     private Vector3 Rotation;
     private Vector3 Camerarotation;
     private Rigidbody rgb;

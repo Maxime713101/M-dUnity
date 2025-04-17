@@ -52,6 +52,7 @@ public class PorteTrigger : MonoBehaviour
                 audioSource.Stop();
                 audioSource.clip = fermetureClip;
                 audioSource.Play();
+                
             }
         }
     }

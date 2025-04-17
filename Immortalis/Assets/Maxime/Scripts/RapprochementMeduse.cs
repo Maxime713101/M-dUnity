@@ -12,6 +12,9 @@ public class RapprochementMeduse : MonoBehaviour
     private bool MeduseMoving;
     public bool MeduseIsCloser;
     public GameObject Player;
+    public GameObject MusicPlay;
+    public GameObject AmbianceAll;
+    private int index = 0;
 
     public UnityEvent PhotoMeduseBon;
     public UnityEvent MeduseAssezProche;
@@ -47,6 +50,12 @@ public class RapprochementMeduse : MonoBehaviour
         {
             MeduseMoving = true;
             PlayerParleMeduse.Invoke();
+            if (index == 0)
+            {
+                MusicPlay.SetActive(true);
+                AmbianceAll.SetActive(false);
+                index++;
+            }
         }
         if (other.tag == "Meduse")
         {
@@ -61,5 +70,7 @@ public class RapprochementMeduse : MonoBehaviour
     public void PhotoMedusebon()
     {
         PhotoMeduseBon.Invoke();
+        MusicPlay.SetActive(false);
+        AmbianceAll.SetActive(true);
     }
 }
