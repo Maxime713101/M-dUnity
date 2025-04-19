@@ -21,8 +21,8 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject LookatStart;
     public RapprochementMeduse Meduse;
     public bool InteractionBoss;
-
-
+    public bool IsInteract;
+    public bool InteractWithBoss;
     private Animator AnimatorCurrentObject;
 
     //private variable
@@ -68,6 +68,8 @@ public class PlayerInteraction : MonoBehaviour
     // sUpdate is called once per frame
     void Update()
     {
+        
+
         Vector3 CustomLookAtStart = new Vector3(LookatStart.transform.position.x, this.transform.position.y, LookatStart.transform.position.z);
         if (index < 2)
         {
@@ -123,6 +125,8 @@ public class PlayerInteraction : MonoBehaviour
         if (!IsTalking && canInteract && Input.GetKeyDown(KeyCode.E) && CurrentInteractable != null)
         {
             AnimatorCurrentObject = CurrentInteractable.GetComponentInChildren<Animator>();
+
+            IsInteract = true;
 
             CurrentInteractable?.Interact();
             RemoveOutline();
@@ -205,6 +209,7 @@ public class PlayerInteraction : MonoBehaviour
             }
         }
 
+
         //Pouvoir faire tourner l'objet lorsque uiobjetproche est actif
         if (uiobjetproche != null)
         {
@@ -217,12 +222,12 @@ public class PlayerInteraction : MonoBehaviour
             currentRotationY -= mouserotationx;
 
             currentRotationY = Mathf.Clamp(currentRotationY, minRotationY, maxRotationY);
-            currentRotationX = Mathf.Clamp(currentRotationX,minRotationX, maxRotationX);
+            currentRotationX = Mathf.Clamp(currentRotationX, minRotationX, maxRotationX);
 
-            
+
             meshGameObject[5].transform.localRotation = Quaternion.Euler(currentRotationX, currentRotationY, 0);
-            
-            
+
+
         }
 
         
@@ -263,6 +268,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         IsTalking = false;
         canInteract = true;
+        IsInteract = false;
         MouseNotVisible();
     }
     public void DansInventaire()
@@ -275,6 +281,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             inventaireimage[1].sprite = imageobjet[0].sprite;
             uiobjetinventaire.SetActive(true);
+            CurrentInteractable.gameObject.SetActive(false);
         }
         else if (imageobjet != null && CurrentInteractable.tag == "AppareilPhoto")
         {
@@ -319,6 +326,15 @@ public class PlayerInteraction : MonoBehaviour
         
     }
 
+public void InteractBoss()
+    {
+        InteractWithBoss = true;
+    }
+public void StopInteractWithBoss()
+    {
+        InteractWithBoss = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "InteractionBoss")
@@ -326,4 +342,5 @@ public class PlayerInteraction : MonoBehaviour
             InteractionBoss = true;
         }
     }
+    
 }

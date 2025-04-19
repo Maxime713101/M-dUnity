@@ -8,10 +8,11 @@ public class EcranFinFadeOut : MonoBehaviour
 {
     public Image fadeImage;
     public float fadeDuration = 1f;
+    public float fadeDurationBegin = 2f;
 
     void Start()
     {
-        
+        StartCoroutine(FadeIn());
     }
 
     public IEnumerator FadeOut()
@@ -31,6 +32,25 @@ public class EcranFinFadeOut : MonoBehaviour
         color.a = 1f;
         fadeImage.color = color;
         SceneManager.LoadScene("GeneriqueFin");
+    }
+    public IEnumerator FadeIn()
+    {
+        float elapsed = 0f;
+        Color color = fadeImage.color;
+        color.a = 1f; // Commence opaque
+        fadeImage.color = color;
+
+        while (elapsed <= fadeDurationBegin)
+        {
+            elapsed += Time.deltaTime;
+            color.a = Mathf.Clamp01(1 - (elapsed / fadeDurationBegin));
+            fadeImage.color = color;
+            yield return null;
+        }
+
+        // Pour être sûr que ce soit transparent à la fin
+        color.a = 0f;
+        fadeImage.color = color;
     }
     public void StartFadeOut()
     {

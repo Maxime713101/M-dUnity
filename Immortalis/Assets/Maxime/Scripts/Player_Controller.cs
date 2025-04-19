@@ -8,8 +8,8 @@ using UnityEngine.UIElements;
 public class Player_controller : MonoBehaviour
 {
     public float Speed = 3.0f;
-    public float mouse_sensitivx = 3.0f;
-    public float mouse_sensitivy = 3.0f;
+    public float mouse_sensitivx = 1.0f;
+    public float mouse_sensitivy = 5.0f;
     private Player_movement PlayerMov;
     private bool IsTalking = false;
     
