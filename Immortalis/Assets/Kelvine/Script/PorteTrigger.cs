@@ -22,7 +22,7 @@ public class PorteTrigger : MonoBehaviour
         {
             animator.SetBool("PlayerDansZone", true);
             porteOuverte = true;
-            Debug.Log("jerentre");
+            
 
             if (porteOuverte == true)
             {
@@ -31,7 +31,7 @@ public class PorteTrigger : MonoBehaviour
                 audioSource.Stop();
                 audioSource.clip = ouvertureClip;
                 audioSource.Play();
-                Debug.Log("audio jouer");
+               
             }
         }
     }
@@ -41,7 +41,7 @@ public class PorteTrigger : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("jesort");
+            
             animator.SetBool("PlayerDansZone", false);
             porteOuverte = false;
 

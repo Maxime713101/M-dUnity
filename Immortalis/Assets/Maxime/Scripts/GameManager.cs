@@ -22,13 +22,15 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        float savedVolume = PlayerPrefs.GetFloat("VoiceVolume", 5f); // par défaut à mi-volume
-        float savedmusicvolume = PlayerPrefs.GetFloat("MusicVolume",0.5f);
+        float savedVolume = 0.25f; // par défaut à mi-volume
+        float savedmusicvolume = 0.6f;
 
         volumeMusicSlider.value = savedmusicvolume;
+
         volumeVoiceSlider.value = savedVolume;
 
         SetMusiqueVolume(savedmusicvolume);
+
         SetVoiceVolume(savedVolume);
 
         volumeVoiceSlider.onValueChanged.AddListener(SetVoiceVolume);
@@ -83,8 +85,8 @@ public class GameManager : MonoBehaviour
     public void SetVoiceVolume(float volume)
     {
         //// le volume peut aller de 0 à 20
-        //float dB = Mathf.Lerp(0f, 20f, volume);
-        audioMixerVoice.SetFloat("VoiceVolume", volume);
+        float dB = Mathf.Lerp(0f, 20f, volume);
+        audioMixerVoice.SetFloat("VoiceVolume", dB);
         PlayerPrefs.SetFloat("VoiceVolume", volume);
     }
 

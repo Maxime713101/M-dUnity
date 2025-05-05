@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Menu.unity
+    guid: 8c76b07be0fac3545b9a4d4e114611e9
+  - enabled: 1
     path: Assets/LaurieScene.unity
     guid: 3d333ec5ce7f9834bbcec40eb1ef66d9
   - enabled: 1

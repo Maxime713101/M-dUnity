@@ -6,7 +6,7 @@ public class MissionManager : MonoBehaviour
 {
     public UnityEvent ChangementTask;
     private int nbpatientparler = 0;
-
+    private bool Clorobenzenerecup = false;
     public GameObject TacheDebutSprite;
     public GameObject TacheChimieOnly;
     public GameObject TachePatientOnly;
@@ -50,7 +50,7 @@ public class MissionManager : MonoBehaviour
     }
     public void TacheFinis()
     {
-        if(nbpatientparler == 4)
+        if(nbpatientparler == 3 && Clorobenzenerecup == true)
         {
             TacheFinisSprite.SetActive(true);
             TachePatientOnly.SetActive(false);
@@ -83,5 +83,9 @@ public class MissionManager : MonoBehaviour
     public void CompterPatientParler()
     {
         nbpatientparler++;
+    }
+    public void ClorobenzèneRécup()
+    {
+        Clorobenzenerecup = true;
     }
 }
